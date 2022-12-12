@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Mastermind</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <header id="header">
+            <p id="numberOfAttempts"></p>  
+            <input type="button" id="boutonRejouer" value="Relancer une partie" OnClick="location.reload()">
+        </header>
+
+        <h1>🎲 Mastermind</h1>
+
+        <!--PIONS-->
+
+        <p id="guessCombination">Choisissez 4 pions parmi les 8 couleurs :</p>
+
+        <div id="couleurs">
+            <div id="blue" class="couleur" value="bleu">
+                <input type="button" name="pion" value="bleu" id="bleu" class="pion" OnClick="moveColor('blue')">
+                <p id="couleur">bleu</p>
+            </div>
+            <div id="red" class="couleur" value="rouge">
+                <input type="button" name="pion" value="rouge" id="rouge" class="pion" OnClick="moveColor('red')">
+                <p id="couleur">rouge</p>
+            </div>
+            <div id="yellow" class="couleur" value="jaune">
+                <input type="button" name="pion" value="jaune" id="jaune" class="pion" OnClick="moveColor('yellow')">
+                <p id="couleur">jaune</p>
+            </div>
+            <div id="green" class="couleur" value="vert">
+                <input type="button" name="pion" value="vert" id="vert" class="pion" OnClick="moveColor('green')">
+                <p id="couleur">vert</p>
+            </div>
+            <div id="purple" class="couleur" value="violet">
+                <input type="button" name="pion" value="violet" id="violet" class="pion" OnClick="moveColor('purple')">
+                <p id="couleur">violet</p>
+            </div>
+            <div id="orange" class="couleur" value="orange">
+                <input type="button" name="pion" value="orange" id="oraange" class="pion" OnClick="moveColor('orange')">
+                <p id="couleur">orange</p>
+            </div>
+            <div id="grey" class="couleur" value="gris">
+                <input type="button" name="pion" value="gris" id="gris" class="pion" OnClick="moveColor('grey')">
+                <p id="couleur">gris</p>
+            </div>
+            <div id="pink" class="couleur" value="rose">
+                <input type="button" name="pion" value="rose" id="rose" class="pion" OnClick="moveColor('pink')">
+                <p id="couleur">rose</p>
+            </div>
+        </div>
+        
+        <br>
+
+        <!--BOUTONS-->
+
+        <!--<input type="button" id="boutonJouer" value="Tester la combinaison" OnClick="gameOK()">-->
+        <!--<input type="button" id="boutonEffacer" value="Réessayer" OnClick="reload()">-->
+
+        <br>
+        
+        <!-- <p id="essaisMax"></p> -->
+
+        <!-- <p id="gagne"></p> -->        
+        
+        <!--ESSAIS-->
+
+        <section id="essais">
+            <!-- <p><strong>Les 4 pions choisis :</strong></p> -->
+
+            <div id="lesEssais">
+                <div class="essaisCLASS">
+                    <p id="numEssai">Essai 1</p>
+                    <div id="essai1">
+                        <!--On y déplace les couleurs sélectionnées-->
+                    </div>
+                        <div id="indicationsCouleurs">
+                            <p id="couleursBienPlacees1" class="couleursBienPlacees"></p>
+                            <p id="couleursCorrectes1" class="couleursCorrectes"></p>
+                        </div>
+                </div>
+
+                <div class="essaisCLASS">
+                    <p id="numEssai">Essai 2</p>
+                    <div id="essai2"></div>
+                        <div id="indicationsCouleurs">
+                            <p id="couleursBienPlacees2" class="couleursBienPlacees"></p>
+                            <p id="couleursCorrectes2" class="couleursCorrectes"></p>
+                        </div>
+                </div>
+
+                <div class="essaisCLASS">
+                    <p id="numEssai">Essai 3</p>
+                    <div id="essai3"></div>
+                        <div id="indicationsCouleurs">
+                            <p id="couleursBienPlacees3" class="couleursBienPlacees"></p>
+                            <p id="couleursCorrectes3" class="couleursCorrectes"></p>
+                        </div>
+                </div>
+
+                <div class="essaisCLASS">
+                    <p id="numEssai">Essai 4</p>
+                    <div id="essai4"></div>
+                        <div id="indicationsCouleurs">
+                            <p id="couleursBienPlacees4" class="couleursBienPlacees"></p>
+                            <p id="couleursCorrectes4" class="couleursCorrectes"></p>
+                        </div>
+                </div>
+
+                <div class="essaisCLASS">
+                    <p id="numEssai">Essai 5</p>
+                    <div id="essai5"></div>
+                        <div id="indicationsCouleurs">
+                            <p id="couleursBienPlacees5" class="couleursBienPlacees"></p>
+                            <p id="couleursCorrectes5" class="couleursCorrectes"></p>
+                        </div>
+                </div>
+
+                <div class="essaisCLASS">
+                    <p id="numEssai">Essai 6</p>
+                    <div id="essai6"></div>
+                        <div id="indicationsCouleurs">
+                            <p id="couleursBienPlacees6" class="couleursBienPlacees"></p>
+                            <p id="couleursCorrectes6" class="couleursCorrectes"></p>
+                        </div>
+                </div>
+
+                <div class="essaisCLASS">
+                    <p id="numEssai">Essai 7</p>
+                    <div id="essai7"></div>
+                        <div id="indicationsCouleurs">
+                            <p id="couleursBienPlacees7" class="couleursBienPlacees"></p>
+                            <p id="couleursCorrectes7" class="couleursCorrectes"></p>
+                        </div>
+                </div>
+
+                <div class="essaisCLASS">
+                    <p id="numEssai">Essai 8</p>
+                    <div id="essai8"></div>
+                        <div id="indicationsCouleurs">
+                            <p id="couleursBienPlacees8" class="couleursBienPlacees"></p>
+                            <p id="couleursCorrectes8" class="couleursCorrectes"></p>
+                        </div>
+                </div>
+
+                <div class="essaisCLASS">
+                    <p id="numEssai">Essai 9</p>
+                    <div id="essai9"></div>
+                        <div id="indicationsCouleurs">
+                            <p id="couleursBienPlacees9" class="couleursBienPlacees"></p>
+                            <p id="couleursCorrectes9" class="couleursCorrectes"></p>
+                        </div>
+                </div>
+
+                <div class="essaisCLASS">
+                    <p id="numEssai">Essai 10</p>
+                    <div id="essai10"></div>
+                        <div id="indicationsCouleurs">
+                            <p id="couleursBienPlacees10" class="couleursBienPlacees"></p>
+                            <p id="couleursCorrectes10" class="couleursCorrectes"></p>
+                        </div>
+                </div>
+
+            </div>
+        </section> 
+
+        <script src="js/script.js"></script>
+
+    </body>
+</html>

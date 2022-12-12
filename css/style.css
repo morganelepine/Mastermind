@@ -1,0 +1,266 @@
+body
+{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin: 0px 100px;
+}
+
+/*HEADER*/
+#header{
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky; /*reste au dessus de la page*/
+    top: 0; /*sticky en haut de l'écran*/
+}
+
+#boutonRejouer {
+    background-color:rgba(30, 144, 245, 0.1); 
+    border: 2px solid dodgerblue;
+    border-radius: 20px;
+    color: black; 
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+  }
+
+#boutonRejouer:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+#numberOfAttempts{
+    background-color:rgba(220, 20, 60, 0.1);;
+    border: 2px solid crimson;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+#numberOfAttempts:disabled{
+    display: none;
+}
+
+
+/*TITRE*/
+h1
+{
+    color:crimson;
+    font-size: 50px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+/*INDICATIONS*/
+#essaisMax{
+    color: rgb(179, 23, 23);
+    font-style: italic;
+    font-weight: bold;
+}
+
+#gagne{
+    color:darkgreen;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/*PIONS*/
+
+#couleurs{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pion{
+    border: none;
+    border-radius: 50px;
+    padding: 10px 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.pion:hover{
+    border: 1.5px solid rgb(32, 32, 32);
+}
+
+.pion:focus{
+    border: 3px solid rgb(32, 32, 32);
+}
+
+#bleu{
+    background-color: dodgerblue;
+    color:dodgerblue;
+}
+
+#rouge{
+    background-color:crimson;
+    color:crimson;
+}
+
+#jaune{
+    background-color:goldenrod;
+    color: goldenrod;
+}
+
+#vert{
+    background-color:mediumseagreen;
+    color:mediumseagreen;
+}
+
+#violet{
+    background-color:blueviolet;
+    color:blueviolet;
+}
+
+#oraange{
+    background-color:coral;
+    color:coral;
+}
+
+#gris{
+    background-color: grey;
+    color:grey;
+}
+
+#rose{
+    background-color:hotpink;
+    color:hotpink;
+}
+
+#couleurs #couleur{
+    display: none; /*ne pas afficher le nom des couleurs sous les pions*/
+}
+
+
+/*ESSAIS*/
+
+#essais{
+    margin-bottom: 70px;
+}
+
+#essais #couleur{
+    display: none; /*ne pas afficher le nom des couleurs sous les pions*/
+}
+
+#lesEssais{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 570px;
+    flex-wrap: wrap; /*passer à la ligne lorsque les éléments ne rentrent pas*/
+}
+
+#lesEssais #numEssai{
+    margin-right: 20px;
+}
+
+#indicationsCouleurs{
+    margin-right: 0;
+}
+
+.essaisCLASS{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /*passer à la ligne lorsque les éléments ne rentrent pas*/
+    /*margin: auto;*/
+    justify-content: left;
+    align-items: center;
+
+}
+
+#essai1, #essai2, #essai3, #essai4, #essai5, #essai6, #essai7, #essai8, #essai9, #essai10, #essai11, #essai12{
+    display: flex;
+    flex-direction: row;
+    border: 1px dotted grey;
+    margin-right: 20px;
+}
+
+.couleursBienPlacees, .couleursCorrectes{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+
+
+/*BOUTONS*/
+
+#boutonJouer {
+  border: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin-top: 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color:rgba(46, 139, 86, 0.167); 
+  color: black; 
+  border: 2px solid seagreen;
+  border-radius: 30px;
+}
+
+#boutonJouer:hover {
+  background-color: seagreen;
+  color: white;
+}
+
+#boutonJouer:disabled {
+    background-color: rgba(128, 128, 128, 0.1);;
+    color: grey;
+    font-style: italic;
+    border: none;
+    cursor: not-allowed;
+  }
+
+#boutonEffacer {
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color:rgba(220, 20, 60, 0.1); 
+    color: black; 
+    border: 2px solid crimson;
+    border-radius: 30px;
+
+  }
+  
+#boutonEffacer:hover {
+    background-color: crimson;
+    color: white;
+}
+
+#boutonEffacer:disabled {
+    background-color: rgba(128, 128, 128, 0.1);;
+    color: grey;
+    font-style: italic;
+    border: none;
+    cursor: not-allowed;
+}
+
+
+
+/*ne s'exécute que quand la largeur d'écran est <= 700px*/
+@media screen and (max-width:700px){
+    header{
+        background-color: #f7f7f7;
+    }
+}

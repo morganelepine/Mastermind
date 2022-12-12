@@ -3,17 +3,18 @@ body
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     text-align: center;
     background-color: #f7f7f7;
-    margin: 0px 100px;
+    margin: 0% 10%;
 }
 
 /*HEADER*/
-#header{
+#nav{
     padding: 1%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: sticky; /*reste au dessus de la page*/
     top: 0; /*sticky en haut de l'écran*/
+    background-color:#f7f7f7;
 }
 
 #boutonRejouer {
@@ -27,6 +28,7 @@ body
     cursor: pointer;
     padding: 5px 10px;
     margin: 5px;
+    width: 170px;
   }
 
 #boutonRejouer:hover {
@@ -34,18 +36,18 @@ body
     color: white;
 }
 
-#numberOfAttempts{
+#attempts{
     background-color:rgba(220, 20, 60, 0.1);;
     border: 2px solid crimson;
     border-radius: 20px;
     color: black;
     text-align: center;
     font-size: 16px;
-    padding: 5px 10px;
     margin: 5px;
+    width: 170px;
 }
 
-#numberOfAttempts:disabled{
+#attempts:disabled{
     display: none;
 }
 
@@ -56,7 +58,10 @@ h1
     color:crimson;
     font-size: 50px;
     margin: auto;
-    margin-bottom: 40px;
+}
+
+#guessCombination{
+    margin: 0;
 }
 
 /*INDICATIONS*/
@@ -74,6 +79,14 @@ h1
 
 
 /*PIONS*/
+
+#sectionPions{
+    position: sticky; /*reste au dessus de la page*/
+    top: 87px; /*sticky en haut de l'écran*/
+    background-color:#f7f7f7;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
 
 #couleurs{
     margin: auto;
@@ -176,10 +189,9 @@ h1
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; /*passer à la ligne lorsque les éléments ne rentrent pas*/
-    /*margin: auto;*/
     justify-content: left;
     align-items: center;
-
+    margin-bottom: 15px;
 }
 
 #essai1, #essai2, #essai3, #essai4, #essai5, #essai6, #essai7, #essai8, #essai9, #essai10, #essai11, #essai12{
@@ -258,9 +270,20 @@ h1
 
 
 
-/*ne s'exécute que quand la largeur d'écran est <= 700px*/
-@media screen and (max-width:700px){
-    header{
+/*ne s'exécute que quand la largeur d'écran est <= 1000px*/
+@media screen and (max-width:1000px){
+    body{
+        margin: 0% 5%;
+    }
+    nav{
         background-color: #f7f7f7;
+    }
+}
+
+/*ne s'exécute que quand la largeur d'écran est <= 500px*/
+@media screen and (max-width:500px){
+    .essaisCLASS{
+        justify-content: center;
+        margin-bottom: 30px;
     }
 }

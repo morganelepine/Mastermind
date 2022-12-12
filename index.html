@@ -8,69 +8,64 @@
     </head>
     <body>
 
-        <header id="header">
-            <p id="numberOfAttempts"></p>  
+        <nav id="nav">
+            <div id="attempts">
+                <p id="numberOfAttempts"></p>  
+            </div>
+            <h1>🎲 Mastermind 🎲</h1>
             <input type="button" id="boutonRejouer" value="Relancer une partie" OnClick="location.reload()">
-        </header>
+        </nav>
 
-        <h1>🎲 Mastermind</h1>
-
-        <!--PIONS-->
-
-        <p id="guessCombination">Choisissez 4 pions parmi les 8 couleurs :</p>
-
-        <div id="couleurs">
-            <div id="blue" class="couleur" value="bleu">
-                <input type="button" name="pion" value="bleu" id="bleu" class="pion" OnClick="moveColor('blue')">
-                <p id="couleur">bleu</p>
-            </div>
-            <div id="red" class="couleur" value="rouge">
-                <input type="button" name="pion" value="rouge" id="rouge" class="pion" OnClick="moveColor('red')">
-                <p id="couleur">rouge</p>
-            </div>
-            <div id="yellow" class="couleur" value="jaune">
-                <input type="button" name="pion" value="jaune" id="jaune" class="pion" OnClick="moveColor('yellow')">
-                <p id="couleur">jaune</p>
-            </div>
-            <div id="green" class="couleur" value="vert">
-                <input type="button" name="pion" value="vert" id="vert" class="pion" OnClick="moveColor('green')">
-                <p id="couleur">vert</p>
-            </div>
-            <div id="purple" class="couleur" value="violet">
-                <input type="button" name="pion" value="violet" id="violet" class="pion" OnClick="moveColor('purple')">
-                <p id="couleur">violet</p>
-            </div>
-            <div id="orange" class="couleur" value="orange">
-                <input type="button" name="pion" value="orange" id="oraange" class="pion" OnClick="moveColor('orange')">
-                <p id="couleur">orange</p>
-            </div>
-            <div id="grey" class="couleur" value="gris">
-                <input type="button" name="pion" value="gris" id="gris" class="pion" OnClick="moveColor('grey')">
-                <p id="couleur">gris</p>
-            </div>
-            <div id="pink" class="couleur" value="rose">
-                <input type="button" name="pion" value="rose" id="rose" class="pion" OnClick="moveColor('pink')">
-                <p id="couleur">rose</p>
-            </div>
-        </div>
         
-        <br>
+        <!--PIONS-->
+        
+        <section id="sectionPions">
 
-        <!--BOUTONS-->
+            <p id="guessCombination">Choisissez 4 pions parmi les 8 couleurs</p>
+            
+            <div id="couleurs">
+                <div id="blue" class="couleur" value="bleu">
+                    <input type="button" name="pion" value="bleu" id="bleu" class="pion" OnClick="moveColor('blue')">
+                    <p id="couleur">bleu</p>
+                </div>
+                <div id="red" class="couleur" value="rouge">
+                    <input type="button" name="pion" value="rouge" id="rouge" class="pion" OnClick="moveColor('red')">
+                    <p id="couleur">rouge</p>
+                </div>
+                <div id="yellow" class="couleur" value="jaune">
+                    <input type="button" name="pion" value="jaune" id="jaune" class="pion" OnClick="moveColor('yellow')">
+                    <p id="couleur">jaune</p>
+                </div>
+                <div id="green" class="couleur" value="vert">
+                    <input type="button" name="pion" value="vert" id="vert" class="pion" OnClick="moveColor('green')">
+                    <p id="couleur">vert</p>
+                </div>
+                <div id="purple" class="couleur" value="violet">
+                    <input type="button" name="pion" value="violet" id="violet" class="pion" OnClick="moveColor('purple')">
+                    <p id="couleur">violet</p>
+                </div>
+                <div id="orange" class="couleur" value="orange">
+                    <input type="button" name="pion" value="orange" id="oraange" class="pion" OnClick="moveColor('orange')">
+                    <p id="couleur">orange</p>
+                </div>
+                <div id="grey" class="couleur" value="gris">
+                    <input type="button" name="pion" value="gris" id="gris" class="pion" OnClick="moveColor('grey')">
+                    <p id="couleur">gris</p>
+                </div>
+                <div id="pink" class="couleur" value="rose">
+                    <input type="button" name="pion" value="rose" id="rose" class="pion" OnClick="moveColor('pink')">
+                    <p id="couleur">rose</p>
+                </div>
+            </div>
+        
+        </section>
 
         <!--<input type="button" id="boutonJouer" value="Tester la combinaison" OnClick="gameOK()">-->
-        <!--<input type="button" id="boutonEffacer" value="Réessayer" OnClick="reload()">-->
+        <!--<input type="button" id="boutonEffacer" value="Réessayer" OnClick="reload()">-->        
 
-        <br>
-        
-        <!-- <p id="essaisMax"></p> -->
-
-        <!-- <p id="gagne"></p> -->        
-        
         <!--ESSAIS-->
 
         <section id="essais">
-            <!-- <p><strong>Les 4 pions choisis :</strong></p> -->
 
             <div id="lesEssais">
                 <div class="essaisCLASS">
@@ -166,7 +161,9 @@
                 </div>
 
             </div>
+
         </section> 
+
 
         <script src="js/script.js"></script>
 

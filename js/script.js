@@ -61,7 +61,7 @@ function moveColor(color){
         combinationOK('#essai1', 'couleursBienPlacees1', 'couleursCorrectes1')
     }
 
-    if(essai<0){
+    if(essai<=0){
         document.getElementsByClassName("pion").disabled = true; //ne fonctionne pas
         alert("Dommage ! Vous avez atteint le nombre maximal de tentatives...")
     /*} else if (essai>10) {

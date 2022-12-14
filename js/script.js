@@ -121,8 +121,6 @@ function combinationOK(divLesEssais, couleursBienPlacees, couleursCorrectes){
         document.getElementById(couleursBienPlacees).innerHTML = "BRAVO ! La combinaison est correcte !"
         document.getElementById(couleursCorrectes).innerHTML.display = none
         document.getElementById("numberOfAttempts").innerHTML.display = none
-        //document.getElementById("boutonJouer").disabled = true;
-        //document.getElementById("boutonEffacer").disabled = true;
     } else {
         document.getElementById(couleursBienPlacees).innerHTML = placedColors + " couleurs correctement placées." 
     }
@@ -139,9 +137,9 @@ function combinationOK(divLesEssais, couleursBienPlacees, couleursCorrectes){
 
 
 
-//-------------------- Lancer/arrêter le jeu
+/*-------------------- Lancer/arrêter le jeu
 
-/*let essai = 10; 
+let essai = 10; 
 function gameOK(){  
     combinationOK(); 
     if(essai<1){
@@ -158,22 +156,6 @@ function gameOK(){
         essai-=1
         document.getElementById("numberOfAttempts").innerHTML = "Nombre d'essais restants : " + essai
     }
-}*/
-
-
-/*
-function reload(){
-    document.getElementById('couleurs').appendChild(document.getElementById('blue'))
-    document.getElementById('couleurs').appendChild(document.getElementById('red'))
-    document.getElementById('couleurs').appendChild(document.getElementById('yellow'))
-    document.getElementById('couleurs').appendChild(document.getElementById('green'))
-    document.getElementById('couleurs').appendChild(document.getElementById('purple'))
-    document.getElementById('couleurs').appendChild(document.getElementById('orange'))
-    document.getElementById('couleurs').appendChild(document.getElementById('grey'))
-    document.getElementById('couleurs').appendChild(document.getElementById('pink'))
-
-    document.getElementById("couleursBienPlacees").innerHTML = ""
-    document.getElementById("couleursCorrectes").innerHTML = ""
 }
 */
 
@@ -181,6 +163,11 @@ function reload(){
 
 
 
+
+document.getElementsByClassName("essaisCLASS").onclick = function () {
+    document.getElementById('essai2').appendChild(document.getElementById(color))
+
+};
 
 
 

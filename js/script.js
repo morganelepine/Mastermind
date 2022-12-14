@@ -9,7 +9,7 @@ let chosenColor4 = prompt("Choisissez le quatrième pion à trouver", "Le quatri
 let combinaison = [chosenColor1, chosenColor2, chosenColor3, chosenColor4] 
 */
 
-let combinaison = ["vert", "jaune", "rose", "orange"]
+let combinaison = ["bleu", "jaune", "rose", "orange"]
 
 
 //-------------------- Clôner le pion sélectionné et le descendre dans la section "essai1" (4 pions max)

@@ -8,12 +8,15 @@
     </head>
     <body>
 
-        <nav id="nav">
-            <div id="attempts">
-                <p id="numberOfAttempts"></p>  
-            </div>
-            <h1>🎲 Mastermind 🎲</h1>
+        <section id="header">
+
+            <nav id="nav">
             <input type="button" id="boutonRejouer" value="Relancer une partie" OnClick="location.reload()">
+            <h1>🎲 Mastermind 🎲</h1>
+            <input type="button" id="attempts" name="attempts" value="">
+            <!-- <div id="attempts">
+                <p id="numberOfAttempts"></p>  
+            </div> -->
         </nav>
 
         
@@ -22,7 +25,7 @@
         <section id="sectionPions">
 
             <p id="guessCombination">Choisissez 4 pions parmi les 8 couleurs</p>
-            
+
             <div id="couleurs">
                 <div id="blue" class="couleur" value="bleu">
                     <input type="button" name="pion" value="bleu" id="bleu" class="pion" OnClick="moveColor('blue')">
@@ -57,8 +60,13 @@
                     <p id="couleur">rose</p>
                 </div>
             </div>
-        
+            
+            <!-- <p id="numberOfAttempts"></p>   -->
+
         </section>
+
+    </section>
+
 
         <!--<input type="button" id="boutonJouer" value="Tester la combinaison" OnClick="gameOK()">-->
         <!--<input type="button" id="boutonEffacer" value="Réessayer" OnClick="reload()">-->        

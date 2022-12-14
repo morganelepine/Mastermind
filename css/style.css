@@ -7,14 +7,18 @@ body
 }
 
 /*HEADER*/
+#header{
+    position: sticky; /*reste au dessus de la page*/
+    top: 0; /*sticky en haut de l'écran*/
+    background-color:#f7f7f7;
+}
+
 #nav{
     padding: 1%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    position: sticky; /*reste au dessus de la page*/
-    top: 0; /*sticky en haut de l'écran*/
-    background-color:#f7f7f7;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /*passer à la ligne lorsque les éléments ne rentrent pas*/
 }
 
 #boutonRejouer {
@@ -28,7 +32,7 @@ body
     cursor: pointer;
     padding: 5px 10px;
     margin: 5px;
-    width: 170px;
+    width: 165px;
   }
 
 #boutonRejouer:hover {
@@ -43,12 +47,18 @@ body
     color: black;
     text-align: center;
     font-size: 16px;
+    padding: 5px 10px;
     margin: 5px;
-    width: 170px;
+    width: 165px;
 }
 
 #attempts:disabled{
     display: none;
+}
+
+#numberOfAttempts{
+    color: grey;
+    font-style: italic;
 }
 
 
@@ -56,7 +66,7 @@ body
 h1
 {
     color:crimson;
-    font-size: 50px;
+    font-size: 4vw;
     margin: auto;
 }
 
@@ -81,9 +91,6 @@ h1
 /*PIONS*/
 
 #sectionPions{
-    position: sticky; /*reste au dessus de la page*/
-    top: 87px; /*sticky en haut de l'écran*/
-    background-color:#f7f7f7;
     padding-top: 20px;
     padding-bottom: 40px;
 }
@@ -173,7 +180,7 @@ h1
     margin: auto;
     justify-content: center;
     align-items: center;
-    max-width: 570px;
+    max-width: 550px;
     flex-wrap: wrap; /*passer à la ligne lorsque les éléments ne rentrent pas*/
 }
 
@@ -183,13 +190,14 @@ h1
 
 #indicationsCouleurs{
     margin-right: 0;
+    width: 255px;
 }
 
 .essaisCLASS{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; /*passer à la ligne lorsque les éléments ne rentrent pas*/
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
 }
@@ -198,7 +206,6 @@ h1
     display: flex;
     flex-direction: row;
     border: 1px dotted grey;
-    margin-right: 20px;
 }
 
 .couleursBienPlacees, .couleursCorrectes{
@@ -270,20 +277,64 @@ h1
 
 
 
+
+
 /*ne s'exécute que quand la largeur d'écran est <= 1000px*/
-@media screen and (max-width:1000px){
+
+/*Large devices (desktops)*/
+@media screen and (max-width:1100px){
     body{
         margin: 0% 5%;
     }
-    nav{
-        background-color: #f7f7f7;
+    #numberOfAttempts{
+        margin-top: 3px;
+        margin-bottom: 4px;
+        font-size: 14px;
     }
 }
 
-/*ne s'exécute que quand la largeur d'écran est <= 500px*/
-@media screen and (max-width:500px){
+/*Large devices (desktops)*/
+@media screen and (max-width:992px){
+
+}
+
+/*Medium devices (tablets)*/
+@media screen and (max-width:778px){
+    #nav{
+        flex-direction: column;
+        order: 1;
+        align-items: center;
+    }
+    h1{
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
     .essaisCLASS{
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+    #boutonRejouer{
+        font-size: 13px;
+        width: auto;
+    }
+    #attempts{
+        font-size: 13px;
+        width: auto;
+    }
+}
+
+/*Small devices (landscape phones)*/
+@media screen and (max-width:576px){
+    #couleurs{
+        flex-wrap: wrap;
+        order: 4;
+    }
+    #lesEssais{
+        flex-wrap: wrap;
+        max-width: none;
+        justify-content: center;
+    }
+    #essai1, #essai2, #essai3, #essai4, #essai5, #essai6, #essai7, #essai8, #essai9, #essai10{
+        flex-wrap: wrap;
     }
 }

@@ -1,12 +1,17 @@
 html{
-    background-image: url("img/table.jpg");
+    background-image: url("/img/table.jpg");
+    background-size:contain;
 }
 
 body
 {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     text-align: center;
-    margin: 0% 10%;
+    margin: 1% 20%;
+    background-color:#f7f7f7;
+    border-radius: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 /*HEADER*/
@@ -30,12 +35,12 @@ body
     border-radius: 20px;
     color: black; 
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     transition-duration: 0.4s;
     cursor: pointer;
     padding: 5px 10px;
     margin: 5px;
-    width: 165px;
+    width: 155px;
     align-self: flex-start;
   }
 
@@ -50,12 +55,12 @@ body
     border-radius: 20px;
     color: black;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     transition-duration: 0.4s;
     cursor: pointer;
     padding: 5px 10px;
     margin: 5px;
-    width: 165px;
+    width: 155px;
     align-self: flex-start;
 }
 
@@ -171,9 +176,6 @@ h1
 
 /*ESSAIS*/
 
-#essais{
-    margin-bottom: 70px;
-}
 
 #essais #couleur{
     display: none; /*ne pas afficher le nom des couleurs sous les pions*/
@@ -298,7 +300,17 @@ h1
 
 /*Large devices (desktops)*/
 @media screen and (max-width:992px){
-
+    h1{
+        font-size: 45px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+    #nav{
+        flex-direction: column;
+        order: 1;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 /*Medium devices (tablets)*/
@@ -306,15 +318,7 @@ h1
     h1{
         font-size: 40px;
     }
-    #nav{
-        flex-direction: column;
-        order: 1;
-        align-items: center;
-    }
-    h1{
-        padding-top: 10px;
-        padding-bottom: 15px;
-    }
+
     .essaisCLASS{
         justify-content: center;
         margin-bottom: 20px;

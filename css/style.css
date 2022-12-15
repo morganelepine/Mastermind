@@ -370,9 +370,9 @@ h1
     h1{
         font-size: 32px;
     }
-    #rules{
+    /*#rules{
         align-self: flex-start;
-    }
+    }*/
     #couleurs{
         flex-wrap: wrap;
         padding-left: 30px;

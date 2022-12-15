@@ -373,7 +373,7 @@ h1
     }
     #reglesDuJeu{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     #couleurs{
         flex-wrap: wrap;

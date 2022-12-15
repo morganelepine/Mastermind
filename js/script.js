@@ -73,8 +73,6 @@ function moveColor(color){
 }
 
 
-
-
 //-------------------- Vérifier si les couleurs sont OK
 
 function combinationOK(divLesEssais, couleursBienPlacees, couleursCorrectes){
@@ -136,6 +134,16 @@ function combinationOK(divLesEssais, couleursBienPlacees, couleursCorrectes){
 }
 
 
+//-------------------- Faire apparaître les règles du jeu au survol
+
+document.getElementById("rules").addEventListener("mouseover", () => {
+    document.getElementById("rulesDetails").style.display = "block";
+});
+document.getElementById("rules").addEventListener("mouseout", () => {
+    document.getElementById("rulesDetails").style.display = "none";
+});
+
+
 
 /*-------------------- Lancer/arrêter le jeu
 
@@ -162,23 +170,11 @@ function gameOK(){
 
 
 
+/*---------------------Permettre de changer de pion [EN COURS]
 
 
 document.getElementsByClassName("essaisCLASS").onclick = function () {
     document.getElementById('essai2').appendChild(document.getElementById(color))
 
 };
-
-
-
-/*---------------------Action au clic sur un bouton
-
-document.getElementById("bouton").onclick = function () {
-    combinationOK();
-};
-
-OU
-
-let btn = document.querySelector("input");
-btn.addEventListener("click", combinationOK);
 */

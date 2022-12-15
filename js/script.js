@@ -146,13 +146,14 @@ function combinationOK(divLesEssais, couleursBienPlacees, couleursCorrectes){
 
 //-------------------- Faire apparaître les règles du jeu au survol
 
-document.getElementById("rules").addEventListener("click", () => {
-    document.getElementById("rulesDetails").style.display = "block";
-});
-// document.getElementById("rules").addEventListener("click", () => {
-//     document.getElementsByClassName("hide").style.display = "none";
-// });
-
+let boutonRegle = document.getElementById("rules");
+boutonRegle.onclick = function afficherRegles() {
+    if (document.getElementById("rulesDetails").style.display == "none") {
+        document.getElementById("rulesDetails").style.display = "block"
+    } else {
+        document.getElementById("rulesDetails").style.display = "none"
+    }
+}
 
 
 

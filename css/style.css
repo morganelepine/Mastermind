@@ -368,12 +368,12 @@ h1
     h1{
         font-size: 32px;
     }
-    #rules {
+    #boutonRejouer {
         margin-bottom: 10px ;
     }
     #reglesDuJeu{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: row;
     }
     #couleurs{
         flex-wrap: wrap;

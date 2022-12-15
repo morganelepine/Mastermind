@@ -1,15 +1,25 @@
-//-------------------- Choisir la combinaison à trouver
+//-------------------- Générer aléatoirement une combinaison
 
-/*
-let chosenColor1 = prompt("Choisissez le premier pion à trouver", "Le premier pion choisi");
-let chosenColor2 = prompt("Choisissez le deuxième pion à trouver", "Le deuxième pion choisi");
-let chosenColor3 = prompt("Choisissez le troisième pion à trouver", "Le troisième pion choisi");
-let chosenColor4 = prompt("Choisissez le quatrième pion à trouver", "Le quatrième pion choisi");
+//let combinaison = ["bleu", "jaune", "rose", "orange"]
 
-let combinaison = [chosenColor1, chosenColor2, chosenColor3, chosenColor4] 
-*/
+let couleurs = ["bleu", "rouge", "jaune", "vert", "violet", "orange", "gris", "rose"]
 
-let combinaison = ["bleu", "jaune", "rose", "orange"]
+let combinaison = []
+
+function createCombinaison(){
+    for (let i=0; i<4; i++){
+        let nombre
+        do{
+            nombre = Math.floor(Math.random() * 7); //Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        while (combinaison.indexOf(couleurs[nombre]) !== -1){ //tant que couleurs[nombre] n'est pas dans combinaison
+            combinaison.push(couleurs[nombre])
+        }
+    }
+}
+createCombinaison()
+console.log(combinaison)
+
 
 
 //-------------------- Clôner le pion sélectionné et le descendre dans la section "essai1" (4 pions max)

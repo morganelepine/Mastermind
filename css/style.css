@@ -39,6 +39,7 @@ body
     transition-duration: 0.4s;
     cursor: pointer;
     padding: 5px 10px;
+    margin-left: 10px;
     margin-right: 10px;
     align-self: flex-start;
     width: 140px;
@@ -64,6 +65,7 @@ body
     cursor: pointer;
     padding: 5px 10px;
     margin-left: 10px;
+    margin-right: 10px;
     align-self: center;
     width: 140px;
 }

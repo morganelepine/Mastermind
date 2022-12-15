@@ -370,9 +370,10 @@ h1
     h1{
         font-size: 32px;
     }
-    /*#rules{
-        align-self: flex-start;
-    }*/
+    #boutonRejouer {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
     #couleurs{
         flex-wrap: wrap;
         padding-left: 30px;

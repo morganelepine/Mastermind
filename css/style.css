@@ -370,8 +370,8 @@ h1
     }
     #couleurs{
         flex-wrap: wrap;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     #lesEssais{
         flex-wrap: wrap;
@@ -381,8 +381,11 @@ h1
     #essai1, #essai2, #essai3, #essai4, #essai5, #essai6, #essai7, #essai8, #essai9, #essai10{
         flex-wrap: wrap;
     }
-    #indicationsCouleurs{
+    .couleursBienPlacees{
         padding-top: 5px;
+        text-align: center;
+    } 
+    .couleursCorrectes{
         text-align: center;
     } 
 }

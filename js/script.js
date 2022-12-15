@@ -136,12 +136,12 @@ function combinationOK(divLesEssais, couleursBienPlacees, couleursCorrectes){
 
 //-------------------- Faire apparaître les règles du jeu au survol
 
-document.getElementById("rules").addEventListener("mouseover", () => {
+document.getElementById("rules").addEventListener("click", () => {
     document.getElementById("rulesDetails").style.display = "block";
 });
-document.getElementById("rules").addEventListener("mouseout", () => {
-    document.getElementById("rulesDetails").style.display = "none";
-});
+// document.getElementById("rules").addEventListener("click", () => {
+//     document.getElementsByClassName("hide").style.display = "none";
+// });
 
 
 

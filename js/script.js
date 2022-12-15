@@ -145,6 +145,7 @@ document.getElementById("rules").addEventListener("mouseout", () => {
 
 
 
+
 /*-------------------- Lancer/arrêter le jeu
 
 let essai = 10; 

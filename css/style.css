@@ -366,13 +366,6 @@ h1
     h1{
         font-size: 32px;
     }
-    #boutonRejouer {
-        margin-bottom: 10px ;
-    }
-    #reglesDuJeu{
-        display: flex;
-        flex-direction: row;
-    }
     #couleurs{
         flex-wrap: wrap;
         padding-left: 30px;

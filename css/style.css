@@ -368,6 +368,9 @@ h1
     h1{
         font-size: 32px;
     }
+    #boutonRejouer {
+        margin-bottom: 10px ;
+      }
     #couleurs{
         flex-wrap: wrap;
         padding-left: 30px;

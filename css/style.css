@@ -352,6 +352,8 @@ h1
     #rules{
         font-size: 12px;
         width: auto;
+        margin-top: 10px;
+        margin-bottom: 5px;
     }
     p{
         font-size: 13px;
@@ -365,6 +367,9 @@ h1
 @media screen and (max-width:576px){
     h1{
         font-size: 32px;
+    }
+    #boutonsHeader{
+        flex-direction: column;
     }
     #couleurs{
         flex-wrap: wrap;

@@ -3,17 +3,18 @@
 //let combinaison = ["bleu", "jaune", "rose", "orange"]
 
 let couleurs = ["bleu", "rouge", "jaune", "vert", "violet", "orange", "gris", "rose"]
-
+let pions = 4
 let combinaison = []
 
 function createCombinaison(){
-    for (let i=0; i<4; i++){
-        let nombre
-        do{
-            nombre = Math.floor(Math.random() * 7); //Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-        while (combinaison.indexOf(couleurs[nombre]) !== -1){ //tant que couleurs[nombre] n'est pas dans combinaison
-            combinaison.push(couleurs[nombre])
+    //Tant qu'il n'y a pas 4 couleurs données
+    while (combinaison.length < pions) {
+        //Générer un index aléatoirement
+        let index = Math.floor(Math.random() * 7);
+        //Si la combinaison ne contient pas encore la couleur sélectionnée
+        if (!combinaison.includes(couleurs[index])) {
+            //Ajouter la couleur à la combinaison
+            combinaison.push(couleurs[index])
         }
     }
 }

@@ -1,0 +1,17 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest --watchAll --verbose",
+    "test:cov": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.4.3"
+  }
+}

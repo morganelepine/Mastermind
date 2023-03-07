@@ -21,11 +21,11 @@ body
     background-color:#f7f7f7;
 }
 
-#nav{
+#boutonsHeader{
     padding: 1%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap; /*passer à la ligne lorsque les éléments ne rentrent pas*/
 }
 
@@ -35,13 +35,14 @@ body
     border-radius: 20px;
     color: black; 
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     transition-duration: 0.4s;
     cursor: pointer;
     padding: 5px 10px;
-    margin: 5px;
-    width: 155px;
+    margin-left: 10px;
+    margin-right: 10px;
     align-self: flex-start;
+    width: 140px;
   }
 
 #boutonRejouer:hover {
@@ -49,24 +50,40 @@ body
     color: white;
 }
 
+#reglesDuJeu{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 #rules{
     background-color:rgba(220, 20, 60, 0.1);;
     border: 2px solid crimson;
     border-radius: 20px;
     color: black;
-    text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     transition-duration: 0.4s;
     cursor: pointer;
     padding: 5px 10px;
-    margin: 5px;
-    width: 155px;
-    align-self: flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-self: center;
+    width: 140px;
 }
 
 #rules:hover {
     background-color: crimson;
     color: white;
+}
+
+.hide{
+    display: none;
+    align-self: flex-start;
+    font-size: 13px;
+    font-style: italic;
+    color: rgb(91, 91, 91);
+    text-align: center;
+    padding-right: 10px;
+    margin: 0;
 }
 
 
@@ -81,6 +98,7 @@ h1
 #guessCombination{
     margin: 0;
 }
+
 
 /*INDICATIONS*/
 #essaisMax{
@@ -289,7 +307,7 @@ h1
 /*Large devices (desktops)*/
 @media screen and (max-width:1100px){
     body{
-        margin: 0% 5%;
+        margin: 5%;
     }
     #numberOfAttempts{
         margin-top: 3px;
@@ -315,6 +333,12 @@ h1
 
 /*Medium devices (tablets)*/
 @media screen and (max-width:778px){
+    body
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
     h1{
         font-size: 40px;
     }
@@ -324,12 +348,14 @@ h1
         margin-bottom: 20px;
     }
     #boutonRejouer{
-        font-size: 13px;
+        font-size: 12px;
         width: auto;
     }
     #rules{
-        font-size: 13px;
+        font-size: 12px;
         width: auto;
+        margin-top: 10px;
+        margin-bottom: 5px;
     }
     p{
         font-size: 13px;
@@ -342,11 +368,16 @@ h1
 /*Small devices (landscape phones)*/
 @media screen and (max-width:576px){
     h1{
-        font-size: 35px;
+        font-size: 32px;
     }
+    #boutonRejouer {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
     #couleurs{
         flex-wrap: wrap;
-        order: 4;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     #lesEssais{
         flex-wrap: wrap;
@@ -356,4 +387,11 @@ h1
     #essai1, #essai2, #essai3, #essai4, #essai5, #essai6, #essai7, #essai8, #essai9, #essai10{
         flex-wrap: wrap;
     }
+    .couleursBienPlacees{
+        padding-top: 5px;
+        text-align: center;
+    } 
+    .couleursCorrectes{
+        text-align: center;
+    } 
 }

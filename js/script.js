@@ -147,7 +147,6 @@ function hints(placedColors, goodColors, couleursCorrectes, couleursBienPlacees)
 }
 
 
-
 //-------------------- Faire apparaître les règles du jeu au survol
 
 let boutonRegle = document.getElementById("rules");
@@ -158,32 +157,6 @@ boutonRegle.onclick = function afficherRegles() {
         document.getElementById("rulesDetails").style.display = "none"
     }
 }
-
-
-
-
-
-/*-------------------- Lancer/arrêter le jeu [OLD]
-let essai = 10; 
-function gameOK(){  
-    combinationOK(); 
-    if(essai<1){
-        document.getElementById("boutonJouer").disabled = true;
-        document.getElementById("boutonEffacer").disabled = true;
-        document.getElementsByName('pion').disabled = true;
-        document.getElementById("essaisMax").innerHTML = "Dommage ! Vous avez atteint le nombre maximal de tentatives...";
-    } else if (combinationOK() == true) {
-        document.getElementById("boutonJouer").disabled = true;
-        document.getElementById("boutonEffacer").disabled = true;
-        //document.getElementById("gagne").innerHTML = "Félicitations !";  
-    } else {
-        //combinationOK(); 
-        essai-=1
-        document.getElementById("numberOfAttempts").innerHTML = "Nombre d'essais restants : " + essai
-    }
-}
-*/
-
 
 
 /*---------------------Permettre de changer de pion [A FAIRE]
